@@ -8,7 +8,9 @@
   ],
   "scripts": {
     "robot": "node robot/index.js",
-    "build": "webpack  --mode=development"
+    "build": "webpack",
+    "version": "npm run build",
+    "postversion": "git push && git push --tag"
   },
   "author": "unofhy@163.com",
   "license": "MIT",
