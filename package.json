@@ -1,6 +1,6 @@
 {
   "name": "aemoji",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "convert all emoji to background sprite icon. Regardless of the current system's emoji style or is not support emoji, aEmoji will convert them to Apple style.",
   "main": "dist/index.js",
   "files": [
