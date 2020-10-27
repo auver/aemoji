@@ -1,18 +1,22 @@
 # aEmoji
 
-convert all emoji to background sprite icon. Regardless of the current system's emoji style or is not support emoji, aEmoji will convert them to Apple style.
+English | [简体中文](./README-zh_CN.md)
+
+![logo](https://repository-images.githubusercontent.com/306268570/f0d45c00-1888-11eb-874c-b29f8544697d)
+
+convert all emoji to CSS image Sprites icon. Regardless of the current system's emoji style or is not support emoji, `aEmoji` will convert them to Apple style.
 
 like https://github.com/node-modules/emoji, but it is updated to the latest full emoji list, [v13.1](https://unicode.org/emoji/charts/index.html), and accessible, with providing a useful description in aria-label.
 
-## Size
+## Size of icon
 
-each emoji icon is 18x18 px, but raw data is 36x36 px for hdpi support.
+single emoji icon is 18x18 px, but raw data is 36x36 px for hdpi support.
 
 ## Demo
 
 [demo](https://auver.github.io/aemoji/demo/)
 
-in Windows 10. System's 'Segoe UI emoji' in the textarea. And aEmoji sprite image above.
+in Windows 10. System's 'Segoe UI emoji' in the textarea. And `aEmoji` CSS image Sprites icon above.
 
 ![in win10](https://user-images.githubusercontent.com/6441838/96964620-5ea51e80-153d-11eb-9a90-e49a35d6d556.png)
 
@@ -37,7 +41,7 @@ import unifiedToHTML, { emojiMap, getEmojiReg } from 'aemoji';
 
 In css, we use `emoji.png` as the background image.
 
-Now, The problem is that the path of emoji.png cannot be changed. So we provide a way to modify the url of emoji.png at runtime. Before you import `aemoji`, set global `__aemoji_url__` as the `emoji.png` real path in your webpack project.
+Now, The problem is that the path of `emoji.png` cannot be changed. So we provide a way to modify the url of `emoji.png` at runtime. Before you import `aemoji`, set global `__aemoji_url__` as the `emoji.png` real path in your webpack project.
 
 aemoji-path.js
 
@@ -55,7 +59,7 @@ import { emojiMap, getEmojiReg } from "aemoji";
 
 Here is an example within [create-react-app](https://create-react-app.dev/).
 
-[![Edit great-hodgkin-z87qp](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/great-hodgkin-z87qp)
+https://github.com/auver/aemoji-cra-example
 
 ### Use by cloning
 
