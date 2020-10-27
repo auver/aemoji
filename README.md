@@ -29,15 +29,35 @@ aEmoji.unifiedToHTML('❤');
 // <span class="emoji emoji2764" aria-label="red heart" role="img"></span>
 ```
 
-### ES6 Module
+### webpack
 
 ```js
 import unifiedToHTML, { emojiMap, getEmojiReg } from 'aemoji';
 ```
 
-### Use by cloning
+In css, we use `emoji.png` as the background image.
 
-And you can convert emoji.png to WebP format.
+Now, The problem is that the path of emoji.png cannot be changed. So we provide a way to modify the url of emoji.png at runtime. Before you import `aemoji`, set global `__aemoji_url__` as the `emoji.png` real path in your webpack project.
+
+aemoji-path.js
+
+```js
+import emojiPath from "aemoji/dist/emoji.png";
+window.__aemoji_url__ = emojiPath;
+```
+
+App.js
+
+```js
+import './aemoji-path.js';
+import { emojiMap, getEmojiReg } from "aemoji";
+```
+
+Here is an example within [create-react-app](https://create-react-app.dev/).
+
+[![Edit great-hodgkin-z87qp](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/great-hodgkin-z87qp)
+
+### Use by cloning
 
 ## API
 
